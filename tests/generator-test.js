@@ -15,43 +15,45 @@
 
 The first class is an `Employee` parent class with the following properties and methods:
 
-* `name`
+  DONE* `name`
 
-* `id`
+  DONE `id`
 
-* `email`
+  DONE `email`
 
-* `getName()`
+  DONE `getName()`
 
-* `getId()`
+  DONE`getId()`
 
-* `getEmail()`
+  DONE `getEmail()`
 
-* `getRole()`&mdash;returns `'Employee'`
+  DONE `getRole()`&mdash;returns `'Employee'`
 
 The other three classes will extend `Employee`.
 
-In addition to `Employee`'s properties and methods, `Manager` will also have the following:
+In addition to `Employee`'s "properties" and methods, `Manager` will also have the following:
 
-* `officeNumber`
+  DONE `officeNumber`
 
-* `getRole()`&mdash;overridden to return `'Manager'`
+  DONE`getRole()`&mdash;overridden to return `'Manager'`
 
 In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
 
-* `github`&mdash;GitHub username
+  PARTIAL DONE `github`&mdash;GitHub username
 
-* `getGithub()`
+  DONE`getGithub()`
 
-* `getRole()`&mdash;overridden to return `'Engineer'`
+  DONE getRole()`&mdash;overridden to return `'Engineer'`
 
 In addition to `Employee`'s properties and methods, `Intern` will also have the following:
 
-* `school`
+  DOND `school`
 
-* `getSchool()`
+  DONE`getSchool()`
 
-* `getRole()`&mdash;overridden to return `'Intern'`
+  DONE getRole()`&mdash;overridden to return `'Intern'`
+
+  
 
 Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.*/
 
