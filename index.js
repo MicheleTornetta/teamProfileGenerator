@@ -5,7 +5,7 @@ const inquirer = require('inquirer');
 // console.log(helper.renderPlaceholder(311, 433));
 
 function writeHtmlFile(data){
-  var html = `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -31,19 +31,26 @@ let init = () => {
   inquirer.prompt([
     {
       type: "input",
-      message: "What is the width of the first box?",
-      name: "box1width"
+      message: "What is your full name?",
+      name: "name"
     },
     {
       type: "input",
-      message: "What is the height of the first box?",
-      name: "box1height"
+      message: "What is your work ID?",
+      name: "id"
     },
     {
-      type: "confirm",
-      message: "Does the first box have a placeholder image?",
-      name: "box1placeholder"
+      type: "input",
+      message: "What is your email address?",
+      name: "email"
     },
+    {
+      type: "list",
+      name: "Title",
+      message: "What is your job position?",
+      choices: ["Manager", "Engineer", "Intern"],
+    },
+
   ])
   .then( answers => {
     console.log(answers);
