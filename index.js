@@ -19,6 +19,7 @@ function writeHtmlFile(data){
     ${data}
   </body>
   </html>`;
+
   fs.writeFile("index.html", html, (err) => {
     if(err) return console.error(err);
     console.log("Success!");
@@ -32,28 +33,53 @@ let init = () => {
     {
       type: "input",
       message: "What is your full name?",
-      name: "name"
-    },
+      name: "name",
+      validate: typeInput => {
+        if (typeInput) {
+          return true;
+        }
+        else {
+          return "Please enter your full name to continue.";
+        }
+        }
+      },
     {
       type: "input",
       message: "What is your work ID?",
-      name: "id"
+      name: "id",
+      validate: typeInput => {
+        if (!isNaN(Number(typeInput))) {
+          return true;
+        }
+        else {
+          return "Please enter your ID number to continue.";
+        }
+        }
     },
     {
       type: "input",
       message: "What is your email address?",
-      name: "email"
+      name: "email",
+      validate: typeInput => {
+        if (typeInput.includes ("@")) {
+          return true;
+        }
+        else {
+          return "Please enter your email address to continue.";
+        }
+        }
     },
     {
       type: "list",
       name: "Title",
       message: "What is your job position?",
       choices: ["Manager", "Engineer", "Intern"],
+     
     },
-
   ])
   .then( answers => {
-    console.log(answers);
+     console.log(answers);
+
   });
 }
 
