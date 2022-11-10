@@ -69,18 +69,64 @@ let init = () => {
         }
         }
     },
+
     {
       type: "list",
-      name: "Title",
+      name: "title",
       message: "What is your job position?",
       choices: ["Manager", "Engineer", "Intern"],
-     
     },
   ])
-  .then( answers => {
-     console.log(answers);
+  // now start the manager question
+  .then(answers => {
+    console.log(answers);
 
+    if (answers.title === 'Manager') {
+      // do manager stuff
+      return inquirer.prompt([
+      {
+        type: "input",
+        name: "officeNumber",
+        message: "What is your office Phone number?",
+      }]).then(managerAnswers => {
+        console.log(managerAnswers);
+      });
+    }
+    // now start the engineer question     
+    else if (answers.title === 'Engineer') {
+      // do Engineer stuff
+      return inquirer.prompt([
+      {
+        type: "input",
+        name: "github",
+        message: "What is your github login id?",
+      }]).then(engineerAnswers => {
+        console.log(engineerAnswers);
+      }); 
+    }
+  // now start the intern question     
+
+    else if (answers.title === 'Intern') {
+      // do Intern stuff
+      return inquirer.prompt([
+      {
+        type: "input",
+        name: "school",
+        message: "What is the name of your school?",
+      }]).then(internAnswers => {
+        console.log(internAnswers);
+
+      });
+    }
+    menu();
   });
 }
+
+function menu() {
+  return inquirer.prompt ({
+
+  })
+  .then ( ({options}) =>);
+} 
 
 init();
