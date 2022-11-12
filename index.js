@@ -199,7 +199,29 @@ let init = async () => {
 
   for (let i = 0; i < employees.length; i++) {
     const employee = employees [i];
+
+    if (i % 3 === 0) {
+      if (i !== 0) {
+        employeeHtml += '</li>';
+      }
+      employeeHtml += '<li class="row">';
+    }
+
+    employeeHtml += `<div class="col">
+    <div class="nopadding">
+      <p>${employee.getName()}</p>
+      <p>${employee.getRole()}</p>
+    </div>
+    <div>
+      <p>${employee.getId()}</p>
+      <p>${employee.getEmail()}</p>
+      <p>{CHANGED VALUE}</p>
+    </div>
+  </div>  
+    `;
   }
+
+  employeeHtml += '</li>';
 
   writeHtmlFile(employeeHtml);
 };
