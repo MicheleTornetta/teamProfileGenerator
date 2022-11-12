@@ -214,7 +214,7 @@ let init = async () => {
     </div>
     <div>
       <p>ID: ${employee.getId()}</p>
-      <p>Email: <a mailto:"${employee.getEmail()}">${employee.getEmail()}</a></p>
+      <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>
       <p>${employee.getSpecialDataName()}: ${employee.getSpecialData()}</p>
     </div>
   </div>  
