@@ -209,13 +209,13 @@ let init = async () => {
 
     employeeHtml += `<div class="col">
     <div class="nopadding">
-      <p>${employee.getName()}</p>
-      <p>${employee.getRole()}</p>
+      <p><h2>Name: ${employee.getName()}</h2></p>
+      <p><h2>Title: ${employee.getRole()}</h2></p>
     </div>
     <div>
-      <p>${employee.getId()}</p>
-      <p>${employee.getEmail()}</p>
-      <p>{CHANGED VALUE}</p>
+      <p>ID: ${employee.getId()}</p>
+      <p>Email: <a mailto:"${employee.getEmail()}">${employee.getEmail()}</a></p>
+      <p>${employee.getSpecialDataName()}: ${employee.getSpecialData()}</p>
     </div>
   </div>  
     `;
