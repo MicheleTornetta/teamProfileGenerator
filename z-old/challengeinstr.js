@@ -61,7 +61,7 @@ Finally, although it’s not a requirement, consider adding validation to ensure
 
 
 
-const Employee = require("../old/generator");
+const Employee = require("./generator");
 
 describe("generator", () => {
   describe("reverse", () => {

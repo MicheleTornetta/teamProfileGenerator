@@ -6,9 +6,9 @@
  * @returns Image Tag
  */
  function renderPlaceholder(width, height){
-    return `<img src="https://www.placecage.com/${width}/${height}" alt="placeholder image" />`;
-  }
-  
-  module.exports = {
-    renderPlaceholder
-  };
+  return `<img src="https://www.placecage.com/${width}/${height}" alt="placeholder image" />`;
+}
+
+module.exports = {
+  renderPlaceholder
+};

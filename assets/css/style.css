@@ -1,0 +1,75 @@
+/*colors */
+
+:root {
+    --bg: #2f4454;
+    --bttn: #2e1518;
+    --accent1: #da7893;
+    --accent2: #376e6f;
+    --accent3: #1c3334;
+    --text: #fff;
+  }
+  
+  /*Global Settings */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+  }
+  
+  .wrapper {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+    color: var(--text);
+  }
+
+  .box-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .box-blue{
+    background: blue;
+    width: 100px;
+    height: 200px;
+  }
+
+  .box-red{
+    background: red;
+    width: 100px;
+    height: 200px;
+  }
+  .box-green{
+    background: green;
+    width: 100px;
+    height: 200px;
+  }
+
+  .nopadding {
+    padding: 0;
+}
