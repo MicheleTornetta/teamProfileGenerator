@@ -171,7 +171,7 @@ let init = async () => {
           answers.name,
           answers.id,
           answers.email,
-          internAnswers.github
+          internAnswers.school
         );
 
         employees.push(intern);
