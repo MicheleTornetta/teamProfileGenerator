@@ -1,8 +1,8 @@
-// https://www.placecage.com/200/300
+
 /**
  * Generates a placeholder img tag.
- * @param {Number} width 
- * @param {Number} height 
+ * @param {25} width 
+ * @param {25} height 
  * @returns Image Tag
  */
  function renderPlaceholder(width, height){

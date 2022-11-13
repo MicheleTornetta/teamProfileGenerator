@@ -1,6 +1,6 @@
 //see lesson 10 - 01 activities - 00 Ins_File...etc and will need to use switch
 
-const { renderPlaceholder } = require("./src/helper");
+/*const { renderPlaceholder } = require("./src/helper");*/
 const Employee = require("./lib/employee");
 const fs = require("fs");
 const inquirer = require("inquirer");
@@ -8,7 +8,7 @@ const Manager = require("./lib/manager");
 const Intern = require("./lib/intern");
 const Engineer = require("./lib/engineer");
 
-// console.log(helper.renderPlaceholder(311, 433));
+// html framework - pulling in data
 
 function writeHtmlFile(data) {
   const html = `<!DOCTYPE html>
@@ -30,24 +30,14 @@ function writeHtmlFile(data) {
         crossorigin="anonymous"
         defer
       ></script>
-      <link rel="stylesheet" href="./assets/css/reset.css" />
-      <link rel="stylesheet" href="./assets/css/style.css" />
+      <link rel="stylesheet" href="../assets/css/reset.css" />
+      <link rel="stylesheet" href="../assets/css/style.css" />
       <title>Output Html</title>
-  
-      <style>
-        div,
-        p {
-          padding: 0;
-        }
-        p {
-          margin-bottom: 2px;
-        }
-      </style>
     </head>
     <body>
       <ul class="container text-center">
         <li class="row">
-          <div class="col">
+          <div class="col" id="topBanner">
             <h1>My Team</h1>
           </div>
         </li>
@@ -61,8 +51,6 @@ function writeHtmlFile(data) {
     console.log("Success!");
   });
 }
-
-// writeHtmlFile(helper.renderPlaceholder(311, 433));
 
 let init = async () => {
   let employees = [];
@@ -208,11 +196,11 @@ let init = async () => {
     }
 
     employeeHtml += `<div class="col">
-    <div class="nopadding">
-      <p><h2>Name: ${employee.getName()}</h2></p>
-      <p><h2>Title: ${employee.getRole()}</h2></p>
+    <div class="topBox">
+      <h2 class="padding">Name: ${employee.getName()}</h2>
+      <h2 class="padding">Title: ${employee.getRole()}</h2>
     </div>
-    <div>
+    <div id="bottomBox">
       <p>ID: ${employee.getId()}</p>
       <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>
       <p>${employee.getSpecialDataName()}: ${employee.getSpecialData()}</p>

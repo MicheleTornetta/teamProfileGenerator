@@ -1,11 +1,11 @@
 /*colors */
 
 :root {
-    --bg: #2f4454;
-    --bttn: #2e1518;
-    --accent1: #da7893;
-    --accent2: #376e6f;
-    --accent3: #1c3334;
+    --bg: #eee2dc;
+    --banner: #ac3b61;
+    --accent1: #edc7b7;
+    --accent2: #bab2b5;
+    --accent3: #123c69;
     --text: #fff;
   }
   
@@ -30,46 +30,37 @@
     background-color: var(--bg);
   }
   
-  .wrapper {
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  header {
+   
+  #topBanner {
     text-align: center;
     padding: 20px;
-    padding-top: 0px;
-    color: var(--text);
+    padding-top: 20px;
+    margin: 0 0 20px 0;
+    background: var(--accent1);
+    font-size: xx-large;
   }
 
-  .box-list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 95vh;
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-  }
+.padding {
+  padding: 10px;
+  margin: 0;
+}
 
-  .box-blue{
-    background: blue;
-    width: 100px;
-    height: 200px;
-  }
+img {
+  height: 20px;
+  width: 20px;
+}
 
-  .box-red{
-    background: red;
-    width: 100px;
-    height: 200px;
-  }
-  .box-green{
-    background: green;
-    width: 100px;
-    height: 200px;
-  }
+h2 {
+  font-size: x-large;
+  color: var(--text);
+}
 
-  .nopadding {
-    padding: 0;
+.topBox {
+  background: var(--accent3);
+}
+
+#bottomBox {
+  background: var(--accent1);
+  padding: 20px 0;
+  margin: 20px 0;
 }
