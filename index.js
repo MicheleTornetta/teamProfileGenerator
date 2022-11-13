@@ -197,8 +197,8 @@ let init = async () => {
 
     employeeHtml += `<div class="col">
     <div class="topBox">
-      <h2 class="padding">Name: ${employee.getName()}</h2>
-      <h2 class="padding">Title: ${employee.getRole()}</h2>
+      <h2 class="padding">${employee.getName()}</h2>
+      <h2 class="padding">${employee.getRole()}</h2>
     </div>
     <div id="bottomBox">
       <p>ID: ${employee.getId()}</p>
