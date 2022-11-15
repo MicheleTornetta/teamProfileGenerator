@@ -18,7 +18,7 @@
 To install the application, you would download the readme-generator repository (https://github.com/MicheleTornetta/teamprofilegenerator).  From there you would navigate to the directory in the command terminal.  Once there the user will need to type in npm i to download the dependencies. 
 
 ## Instructions
-Once dependecies are dowloaded, in the index.js open integrated terminal (which the user can access by right clicking on the index.js file and choosing Open in Integrated terminal), and type in node index. Then the user will type in the answers to the questions and hit enter.
+Once dependecies are dowloaded, in the index.js open integrated terminal (which the user can access by right clicking on the index.js file and choosing Open in Integrated terminal), and type in node index. Then the user will type in the answers to the questions and hit enter.  Once all employees have been added, user will choose No to the questions "Do you wish to add an employee."  Then the index.html file will be created.  
 
 ## Usage Video
 An example of how it works can be viewed here: 
