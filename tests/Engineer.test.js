@@ -37,7 +37,7 @@ describe("Engineer", () => {
     it("you should see the employee's role listed as Engineer", () => {
       const joe = new Engineer("Sam", "101", "sam@work.com", "samyoung");
 
-      expect(joe.getRole()).toEqual("Engineer");
+      expect(joe.getRole()).toEqual("<img src=\"../assets/images/engineerwht.png\" alt=\"Engineer\"> Engineer");
     });
   });
 

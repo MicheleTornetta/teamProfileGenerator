@@ -7,6 +7,7 @@ const inquirer = require("inquirer");
 const Manager = require("./lib/manager");
 const Intern = require("./lib/intern");
 const Engineer = require("./lib/engineer");
+const createHtml = require("./src/createhtml");
 
 // html framework - pulling in data
 
@@ -52,10 +53,12 @@ function writeHtmlFile(data) {
   });
 }
 
+
+
 let init = async () => {
   let employees = [];
   let runAgain = true;
-
+  // ask general employee questions
   while (runAgain) {
     let answer = await inquirer.prompt([
       {
@@ -182,35 +185,7 @@ let init = async () => {
     }
   }
   
-  // generate html
-  let employeeHtml = '';
-
-  for (let i = 0; i < employees.length; i++) {
-    const employee = employees [i];
-
-    if (i % 3 === 0) {
-      if (i !== 0) {
-        employeeHtml += '</li>';
-      }
-      employeeHtml += '<li class="row">';
-    }
-
-    employeeHtml += `<div class="col">
-    <div class="topBox">
-      <h2 class="padding">${employee.getName()}</h2>
-      <h2 class="padding">${employee.getRole()}</h2>
-    </div>
-    <div id="bottomBox">
-      <p>ID: ${employee.getId()}</p>
-      <p>Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></p>
-      <p>${employee.getSpecialDataName()}: ${employee.getSpecialData()}</p>
-    </div>
-  </div>  
-    `;
-  }
-
-  employeeHtml += '</li>';
-
+  const employeeHtml = createHtml(employees);
   writeHtmlFile(employeeHtml);
 };
 // TO DO: CREATE A FUNCTION TO PUT REPLIES INTO AN HTML BOX - WILL NEED A NEW HTML BOX PER EMPLOYEE
