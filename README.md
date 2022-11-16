@@ -12,7 +12,7 @@
 - [Questions](#questions)
 
 ## Application Image 
-![Application Image](../assets/images/teamprofile.png)
+![Application Image](./assets/images/teamprofile.png)
 
 ## Installation Instructions
 To install the application, you would download the readme-generator repository (https://github.com/MicheleTornetta/teamprofilegenerator).  From there you would navigate to the directory in the command terminal.  Once there the user will need to type in npm i to download the dependencies. 
@@ -22,7 +22,7 @@ Once dependecies are dowloaded, in the index.js open integrated terminal (which 
 
 ## Usage Video
 An example of how it works can be viewed here: 
-![Application Gif](../assets/images/teamprofilegeneratorInstructions.gif)
+![Application Gif](./assets/images/teamprofilegeneratorInstructions.gif)
 
 ## License 
 A short, permissive software license. Basically, you can do whatever you want as long as you include the original copyright and license notice in any copy of the software/source.  There are many variations of this license in use.
